@@ -10,6 +10,7 @@ import UIKit
 
 class TipViewController: UIViewController {
     @IBOutlet weak var billField: UITextField!
+    @IBOutlet weak var currencyLabel: UILabel!
     @IBOutlet weak var tipLabel: UILabel!
     @IBOutlet weak var totalLabel: UILabel!
     @IBOutlet weak var tipControl: UISegmentedControl!
@@ -47,6 +48,10 @@ class TipViewController: UIViewController {
     }
     
     func updateTipTotal(){
+        let currencyFormatter = NSNumberFormatter()
+        currencyFormatter.numberStyle = NSNumberFormatterStyle.CurrencyStyle
+        currencyFormatter.locale = NSLocale.currentLocale()
+        
         let billAmount = NSString(string: billField.text!).doubleValue
         let tipPercentages = [defaults.doubleForKey("lowTipKey")/100, defaults.doubleForKey("goodTipKey")/100, defaults.doubleForKey("greatTipKey")/100]
         let tipControlSelected = tipControl.selectedSegmentIndex
@@ -54,8 +59,11 @@ class TipViewController: UIViewController {
         let tip = billAmount * tipPercentage
         let total = billAmount + tip
         
-        tipLabel.text = String(format: "$%.2f", tip)
-        totalLabel.text = String(format: "$%.2f", total)
+//        tipLabel.text = String(format: "$%.2f", tip)
+//        totalLabel.text = String(format: "$%.2f", total)
+        currencyLabel.text = currencyFormatter.currencySymbol
+        tipLabel.text = currencyFormatter.stringFromNumber(tip)
+        totalLabel.text = currencyFormatter.stringFromNumber(total)!
     }
     
     @IBAction func onEditingChanged(sender: AnyObject) {

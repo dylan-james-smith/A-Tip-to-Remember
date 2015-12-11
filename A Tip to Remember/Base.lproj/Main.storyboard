@@ -58,7 +58,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="fill" contentVerticalAlignment="center" placeholder="0.00" textAlignment="right" minimumFontSize="30" translatesAutoresizingMaskIntoConstraints="NO" id="utq-s7-691">
-                                <rect key="frame" x="169" y="94" width="131" height="30"/>
+                                <rect key="frame" x="200" y="94" width="100" height="30"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
@@ -66,13 +66,6 @@
                                     <action selector="onEditingChanged:" destination="evc-YV-0eq" eventType="editingChanged" id="Mcy-6E-aaM"/>
                                 </connections>
                             </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="$" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IX1-a0-HSa">
-                                <rect key="frame" x="151" y="91" width="19" height="36"/>
-                                <animations/>
-                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="fill" contentVerticalAlignment="center" segmentControlStyle="plain" selectedSegmentIndex="1" translatesAutoresizingMaskIntoConstraints="NO" id="Rcj-Ao-h6a">
                                 <rect key="frame" x="20" y="285" width="280" height="29"/>
                                 <animations/>
@@ -85,6 +78,13 @@
                                     <action selector="onEditingChanged:" destination="evc-YV-0eq" eventType="valueChanged" id="NKc-Ut-bOh"/>
                                 </connections>
                             </segmentedControl>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IX1-a0-HSa">
+                                <rect key="frame" x="121" y="91" width="78" height="36"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -99,6 +99,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="billField" destination="utq-s7-691" id="pif-m9-ceE"/>
+                        <outlet property="currencyLabel" destination="IX1-a0-HSa" id="KGc-pR-mc8"/>
                         <outlet property="tipControl" destination="Rcj-Ao-h6a" id="6PN-9U-QoS"/>
                         <outlet property="tipLabel" destination="r0L-Mi-unq" id="lr1-Hm-34K"/>
                         <outlet property="totalLabel" destination="RRB-dK-hot" id="ZLi-yF-3qr"/>
