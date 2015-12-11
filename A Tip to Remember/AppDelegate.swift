@@ -19,16 +19,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         //Setup defaults on first run 
         
         let defaults = NSUserDefaults.standardUserDefaults()
-        let isFirstLoad = defaults.boolForKey("firstLoad")
+        let defaultsExist = defaults.boolForKey("firstLoad")
         
-        if (isFirstLoad) {
-            print("defaults exsits")
+        if (defaultsExist) {
+            print("defaults exist")
         }else{
             defaults.setDouble(18, forKey:"lowTipKey")
             defaults.setDouble(20, forKey:"goodTipKey")
             defaults.setDouble(22, forKey:"greatTipKey")
             defaults.setBool(true, forKey:"firstLoad")
             defaults.synchronize()
+            print("defaults setup")
         
         }
         

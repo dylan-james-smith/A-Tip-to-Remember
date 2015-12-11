@@ -57,7 +57,7 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="fill" contentVerticalAlignment="center" placeholder="0.00" textAlignment="right" clearsOnBeginEditing="YES" minimumFontSize="30" translatesAutoresizingMaskIntoConstraints="NO" id="utq-s7-691">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="fill" contentVerticalAlignment="center" placeholder="0.00" textAlignment="right" minimumFontSize="30" translatesAutoresizingMaskIntoConstraints="NO" id="utq-s7-691">
                                 <rect key="frame" x="169" y="94" width="131" height="30"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
@@ -132,6 +132,7 @@
                                 <animations/>
                                 <connections>
                                     <action selector="lowStepperAction:" destination="Fck-vM-Osn" eventType="valueChanged" id="Ko0-LH-Wsj"/>
+                                    <action selector="onTap:" destination="Fck-vM-Osn" eventType="valueChanged" id="seQ-kT-lS1"/>
                                 </connections>
                             </stepper>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="fill" contentVerticalAlignment="center" textAlignment="right" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="eBI-AT-apZ">
@@ -162,6 +163,7 @@
                                 <animations/>
                                 <connections>
                                     <action selector="goodStepperAction:" destination="Fck-vM-Osn" eventType="valueChanged" id="HTz-bZ-cYS"/>
+                                    <action selector="onTap:" destination="Fck-vM-Osn" eventType="valueChanged" id="pFY-px-s6L"/>
                                 </connections>
                             </stepper>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="fill" contentVerticalAlignment="center" textAlignment="right" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vcF-Om-vLA">
@@ -192,6 +194,7 @@
                                 <animations/>
                                 <connections>
                                     <action selector="greatStepperAction:" destination="Fck-vM-Osn" eventType="valueChanged" id="7uP-88-Wqz"/>
+                                    <action selector="onTap:" destination="Fck-vM-Osn" eventType="valueChanged" id="I2v-vW-D9B"/>
                                 </connections>
                             </stepper>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="fill" contentVerticalAlignment="center" textAlignment="right" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Cxx-Wp-GKD">
