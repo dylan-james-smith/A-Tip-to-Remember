@@ -9,11 +9,21 @@
 import UIKit
 
 class TipViewController: UIViewController {
+    
+    @IBOutlet weak var billTextView: UITextView!
+    @IBOutlet weak var tipLabel: UILabel!
+    @IBOutlet weak var totalLabel: UILabel!
+    @IBOutlet weak var tipControl: UISegmentedControl!
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
         // Do any additional setup after loading the view.
+    }
+    
+    override func viewDidAppear(animated: Bool) {
+        super.viewDidAppear(animated)
+        //keep decimal pad on screen
+        billTextView.becomeFirstResponder()
     }
 
     override func didReceiveMemoryWarning() {
