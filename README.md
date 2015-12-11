@@ -34,6 +34,7 @@ GIF created with [LiceCap](http://www.cockos.com/licecap/).
 ## Notes
 
 Learned: 
+
 A lot about IB Objects and Actions connections and modifications, creating persistent defaults, and a little bit on segues. 
 
 To check for and setup persistent data at launch.
