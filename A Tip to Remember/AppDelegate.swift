@@ -16,6 +16,22 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
+        //Setup defaults on first run 
+        
+        let defaults = NSUserDefaults.standardUserDefaults()
+        let isFirstLoad = defaults.boolForKey("firstLoad")
+        
+        if (isFirstLoad) {
+            print("defaults exsits")
+        }else{
+            defaults.setDouble(18, forKey:"lowTipKey")
+            defaults.setDouble(20, forKey:"goodTipKey")
+            defaults.setDouble(22, forKey:"greatTipKey")
+            defaults.setBool(true, forKey:"firstLoad")
+            defaults.synchronize()
+        
+        }
+        
         return true
     }
 
