@@ -19,6 +19,13 @@ class TipViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        let now = NSDate()
+        let then = defaults.objectForKey("lastTimeKey") as? NSDate
+        
+        if (then != nil && now.timeIntervalSinceDate(then!) < 600){
+            billField.text = NSUserDefaults.standardUserDefaults().stringForKey("lastBillKey")
+            print("load previous bill amount")
+        }
     }
     
     override func viewWillAppear(animated: Bool) {
@@ -53,14 +60,15 @@ class TipViewController: UIViewController {
         currencyFormatter.locale = NSLocale.currentLocale()
         
         let billAmount = NSString(string: billField.text!).doubleValue
+        defaults.setDouble(billAmount, forKey: "lastBillKey")
+        defaults.setObject(NSDate(), forKey: "lastTimeKey")
+        
         let tipPercentages = [defaults.doubleForKey("lowTipKey")/100, defaults.doubleForKey("goodTipKey")/100, defaults.doubleForKey("greatTipKey")/100]
         let tipControlSelected = tipControl.selectedSegmentIndex
         let tipPercentage = tipPercentages[tipControlSelected]
         let tip = billAmount * tipPercentage
         let total = billAmount + tip
         
-//        tipLabel.text = String(format: "$%.2f", tip)
-//        totalLabel.text = String(format: "$%.2f", total)
         currencyLabel.text = currencyFormatter.currencySymbol
         tipLabel.text = currencyFormatter.stringFromNumber(tip)
         totalLabel.text = currencyFormatter.stringFromNumber(total)!
@@ -71,5 +79,11 @@ class TipViewController: UIViewController {
         updateTipTotal()
         
     }
+    override func viewWillDisappear(animated: Bool) {
+        super.viewWillDisappear(animated)
+        print("view will disappear")
+        defaults.synchronize()
+    }
 
+    
 }

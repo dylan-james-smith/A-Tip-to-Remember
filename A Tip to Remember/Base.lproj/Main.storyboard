@@ -39,7 +39,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="right" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="$0.00" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RRB-dK-hot">
-                                <rect key="frame" x="77" y="211" width="223" height="51"/>
+                                <rect key="frame" x="61" y="211" width="239" height="51"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="42"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -58,7 +58,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="fill" contentVerticalAlignment="center" placeholder="0.00" textAlignment="right" minimumFontSize="30" translatesAutoresizingMaskIntoConstraints="NO" id="utq-s7-691">
-                                <rect key="frame" x="200" y="94" width="100" height="30"/>
+                                <rect key="frame" x="165" y="94" width="135" height="30"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
