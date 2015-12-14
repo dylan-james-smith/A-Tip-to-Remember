@@ -15,13 +15,14 @@ The following **required** functionality is complete:
 
 The following **optional** features are implemented:
 * [ ] UI animations
-* [ ] Remembering the bill amount across app restarts (if <10mins)
+* [x] Remembering the bill amount across app restarts (if <10mins)
 * [x] Using locale-specific currency and currency thousands separators.
 * [x] Making sure the keyboard is always visible and the bill amount is always the first responder. This way the user doesn't have to tap anywhere to use this app. Just launch the app and start typing.
 
 The following **additional** features are implemented:
 
-- [ ] List anything else that you can get done to improve the app functionality!
+- [x] List anything else that you can get done to improve the app functionality!
+    Settings uses steppers and text field to update tip percentages 
 
 ## Video Walkthrough 
 
@@ -42,6 +43,10 @@ To check for and setup persistent data at launch.
 Connecting Steppers and textFields to modify in sync
 
 resizing for three charicter currency symbols
+
+When WillDisappear fires
+
+
 
 ## License
 
