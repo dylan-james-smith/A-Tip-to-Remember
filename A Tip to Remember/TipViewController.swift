@@ -21,10 +21,11 @@ class TipViewController: UIViewController {
         // Do any additional setup after loading the view.
         let now = NSDate()
         let then = defaults.objectForKey("lastTimeKey") as? NSDate
+        print(now.timeIntervalSinceDate(then!))
         
         if (then != nil && now.timeIntervalSinceDate(then!) < 600){
             billField.text = NSUserDefaults.standardUserDefaults().stringForKey("lastBillKey")
-            print("load previous bill amount")
+            print("load last bill amount")
         }
     }
     
@@ -59,6 +60,7 @@ class TipViewController: UIViewController {
         currencyFormatter.numberStyle = NSNumberFormatterStyle.CurrencyStyle
         currencyFormatter.locale = NSLocale.currentLocale()
         
+        //setup bill amount & time elapsed defaults value
         let billAmount = NSString(string: billField.text!).doubleValue
         defaults.setDouble(billAmount, forKey: "lastBillKey")
         defaults.setObject(NSDate(), forKey: "lastTimeKey")
@@ -79,10 +81,14 @@ class TipViewController: UIViewController {
         updateTipTotal()
         
     }
+    
     override func viewWillDisappear(animated: Bool) {
         super.viewWillDisappear(animated)
         print("view will disappear")
         defaults.synchronize()
+    }
+    override func viewDidDisappear(animated: Bool) {
+        print("view did disapear")
     }
 
     

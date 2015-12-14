@@ -24,6 +24,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         if (defaultsExist) {
             print("defaults exist")
         }else{
+            defaults.setObject(NSDate(), forKey: "lastTimeKey")
             defaults.setDouble(18, forKey:"lowTipKey")
             defaults.setDouble(20, forKey:"goodTipKey")
             defaults.setDouble(22, forKey:"greatTipKey")
