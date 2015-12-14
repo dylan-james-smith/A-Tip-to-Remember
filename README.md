@@ -28,7 +28,7 @@ The following **additional** features are implemented:
 
 Here's a walkthrough of implemented user stories:
 
-![Walkthrough - A Tip to Remember](walkthrough.gif)
+![Walkthrough - A Tip to Remember](walkthrough.gif) ![Walkthrough - A Tip to Remember](walkthrough2.gif)
 
 GIF created with [LiceCap](http://www.cockos.com/licecap/).
 
