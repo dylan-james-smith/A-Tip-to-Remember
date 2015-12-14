@@ -23,7 +23,7 @@ class TipViewController: UIViewController {
         let then = defaults.objectForKey("lastTimeKey") as? NSDate
         print(now.timeIntervalSinceDate(then!))
         
-        if (then != nil && now.timeIntervalSinceDate(then!) < 600){
+        if  (now.timeIntervalSinceDate(then!) < 600){
             billField.text = NSUserDefaults.standardUserDefaults().stringForKey("lastBillKey")
             print("load last bill amount")
         }
@@ -49,10 +49,6 @@ class TipViewController: UIViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
-    }
-    
-    func tipPercent(tips: String){
-        
     }
     
     func updateTipTotal(){
